@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class= "container">
+     <br/>
+     <form action="/form" method="post">
+          <h1> Enter Details</h1>
+          <br/>
+          <div class="form-group">
+               <label for="exampleInputPassword1">Employee ID :</label>
+               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="619" name="emp_id">
+             </div>
+          <div class="form-group">
+               <label for="exampleInputPassword1">First Name :</label>
+               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Tamojit" name="first_name">
+             </div>
+          <div class="form-group">
+               <label for="exampleInputPassword1">Last Name :</label>
+               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Sarkar" name="last_name">
+             </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email ID :</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tamojit.Sarkar@in.ey.com" name="email">
+            <div class="col-md-12 text-center">
+            <small id="emailHelp" class="form-text text-muted">Check me out</small>
+          </div>
+          </div>
+          <div class="col-md-12 text-center">
+          <div class="form-group form-check">
+               <input type="checkbox" class="form-check-input" id="exampleCheck1">
+               <label class="form-check-label" for="exampleCheck1">Just Do It.</label>
+             </div>
+          </div>   
+               <div class="col-md-12 text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+     </div>
+        </form>
+
+</div>
+{% endblock %}
