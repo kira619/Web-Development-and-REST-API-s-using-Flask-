@@ -1,6 +1,6 @@
 from operator import index
 from flask import Flask, render_template, request
-from flask import jsonify, redirect,url_for
+from flask import jsonify, redirect,url_for,make_response
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from mongoengine import connect,disconnect
@@ -81,9 +81,13 @@ def form():
         user.last_name = request.form.get("last_name")
         user.emp_id = request.form.get("emp_id")
         user.save()
+        return make_response("User Succesfully Added",69)
+        
     except NotUniqueError as nue:
         print("E-Mail already exists.")
+        return make_response("E-Mail already exists .",619)
         return render_template("form2.html")
+        
 
 
 
